@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 type AppProps = {
   children: ReactNode;
@@ -7,9 +9,9 @@ type AppProps = {
 export default function Layout({ children }: AppProps): JSX.Element {
   return (
     <>
-      <div>header</div>
-      <div>{children}</div>
-      <div>footer</div>
+      <Header />
+      {children}
+      <Footer />
     </>
   );
 }
